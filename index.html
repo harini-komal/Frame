@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form for Teaching Staff</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body background="job.jpg">
+    <div class="form-container">
+        <header>
+        <h1>Application Form for Backend Development Role(Database)</h1>
+        </header>
+        <main>
+        <form id="teachingForm">
+            <section>
+                <h2>General Information</h2>
+                <label for="post">Post Applied For:</label>
+                <input type="text" id="post" name="post" placeholder="Enter post" required>
+
+                <label for="department">Department Applied For:</label>
+                <input type="text" id="department" name="department" placeholder="Enter department" required>
+
+                <label for="specialization">Specialization:</label>
+                <input type="text" id="specialization" name="specialization" placeholder="Enter specialization">
+
+                <label for="name">Name in Full:</label>
+                <input type="text" id="name" name="name" placeholder="Enter full name" required>
+
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" rows="4" placeholder="Enter address"></textarea>
+
+                <label for="pincode">Pin Code:</label>
+                <input type="text" id="pincode" name="pincode" maxlength="6" placeholder="Enter pin code">
+
+                <label for="contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" placeholder="Enter contact number">
+
+                <label for="email">E-mail ID:</label>
+                <input type="email" id="email" name="email" placeholder="Enter email">
+            </section>
+
+            <section>
+                <h2>Educational Qualifications</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Examination/Degree</th>
+                            <th>Name of Board/University</th>
+                            <th>Percentage/Grade</th>
+                            <th>Specialization/Subjects</th>
+                            <th>Class/Division</th>
+                            <th>Year of Passing</th>
+                        </tr>
+                    </thead>
+                    <tbody id="educationTable">
+                        <tr>
+                            <td><input type="text" name="degree[]"></td>
+                            <td><input type="text" name="university[]"></td>
+                            <td><input type="text" name="percentage[]"></td>
+                            <td><input type="text" name="subjects[]"></td>
+                            <td><input type="text" name="division[]"></td>
+                            <td><input type="text" name="year[]"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" onclick="addRow('educationTable')">Add Row</button>
+            </section>
+        
+            <section>
+                <h2>Details of Employment Experience</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Organization</th>
+                            <th>Post Held</th>
+                            <th>Period (From - To)</th>
+                            <th>Total Experience</th>
+                            <th>Salary</th>
+                            <th>Nature of Duties</th>
+                        </tr>
+                    </thead>
+                    <tbody id="experienceTable">
+                        <tr>
+                            <td><input type="text" name="organization[]"></td>
+                            <td><input type="text" name="post[]"></td>
+                            <td><input type="text" name="period[]"></td>
+                            <td><input type="text" name="experience[]"></td>
+                            <td><input type="text" name="salary[]"></td>
+                            <td><input type="text" name="duties[]"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="button" onclick="addRow('experienceTable')">Add Row</button>
+            </section>
+        </main>
+        <!-- Declaration -->
+        <footer>
+            <section>
+                <h2>Declaration</h2>
+                <p>
+                    I hereby declare that the information provided in this form is true and correct to the best of my knowledge.
+                </p>
+                <label for="signature">Signature:</label>
+                <input type="text" id="signature" name="signature" placeholder="Enter your signature" required>
+            </section>
+            <button type="submit">Submit Application</button>
+            </footer>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
